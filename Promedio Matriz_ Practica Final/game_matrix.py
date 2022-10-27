@@ -9,6 +9,7 @@ from process_matrix import *
 
 
 square_matrix = [[2,4,5,7],[4,7,9,2],[5,7,3,7],[4,2,6,8]]
+irregular_matrix = [[2,4,5,7,8],[1],[5,3,7],[5,7,3]]
 one_column_matrix = [[2,4,5,7],[4,7,9,2],[5,7,3,7],[4,2,6,8]]
 empty_matrix = []
 
@@ -19,6 +20,12 @@ if __name__ == "__main__":
     print(f'Square Matrix: \n{square_matrix}')
     print('AVERAGES')
     print(f'{averages_sq}\n')
+    
+    #Matriz irregular
+    averages_irr = process_matrix(irregular_matrix)
+    print(f'Irregular matrix: \n{irregular_matrix}')
+    print('AVERAGES')
+    print(f'{averages_irr}\n')
 
     #Matriz de 1 lista
     averages_one = process_matrix(one_column_matrix)
