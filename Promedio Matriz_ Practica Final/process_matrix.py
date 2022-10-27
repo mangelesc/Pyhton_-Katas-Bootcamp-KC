@@ -78,9 +78,18 @@ def get_vertical_neighbours_values(j, list_of_indices, list_of_list):
     #que representa el índice de columna
     for column in list_of_indices:
 
-        #Añadimos el valor de esa columna de la fila j
-        #(fila del valor actual pasada por parámetro)
-        vertical_values.append(list_of_list[column][j])
+        #Comprobamos que la longitud de la columna[j] de list_of_list
+        #es mayor o igual a j (en caso de que la longitud de esa columna sea menos que 
+        #la longitud de la columna de j, por lo que no existirá vecino en esa columna)
+        if (len((list_of_list[column]))-1) >= j:
+
+            #Añadimos el valor de esa columna de la fila j
+            #(fila del valor actual pasada por parámetro)
+            vertical_values.append(list_of_list[column][j])
+        
+        #si no, no calculamos el valor, ya que ese  vecino no existiría
+        else: 
+            pass
 
     return vertical_values
 
